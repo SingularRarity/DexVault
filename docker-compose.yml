@@ -46,6 +46,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
+  # Using redis:7-alpine (replaced valkey - DV-5)
   redis:
     image: redis:7-alpine
     ports:
