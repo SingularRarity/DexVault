@@ -6,7 +6,7 @@ import { ethers } from "hardhat";
 const config: HardhatUserConfig = {
   solidity: {
     version: "0.8.28", // bumped from 0.8.20 for OZ v5 (DV-21)
-    evmVersion: "cancun", // For mcopy opcode (DV-24)
+    evmVersion: "cancun", // mcopy opcode support; _update override syntax fixed (DV-24)
     settings: {
       optimizer: {
         enabled: true,
