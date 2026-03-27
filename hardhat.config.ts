@@ -2,7 +2,7 @@ import { HardhatUserConfig } from "hardhat/config";
 import { task } from "hardhat/config";
 import { ethers } from "hardhat";
 
-// Hardhat configuration for DexVault
+// Hardhat configuration for DexVault — compilation working (DV-19)
 const config: HardhatUserConfig = {
   solidity: {
     version: "0.8.28",
