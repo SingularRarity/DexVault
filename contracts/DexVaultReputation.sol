@@ -30,7 +30,8 @@ contract DexVaultReputation is AccessControl, ReentrancyGuard {
     }
 
     /**
-     * @dev Internal function to handle logic (DV-22)
+     * @dev Internal function to handle logic - avoids external call overhead (DV-22).
+     *      Allows updateScore and future on-chain hooks to share the same path.
      */
     function _updateReputation(address seller, uint256 newScore) internal {
         require(newScore <= 1000, "Invalid score");
