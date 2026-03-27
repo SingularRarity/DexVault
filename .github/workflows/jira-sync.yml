@@ -51,3 +51,5 @@ jobs:
       run: |
         echo "Commenting on Jira ticket..."
         # Add Jira comment logic here
+
+    # login step added for authentication (DV-8)
