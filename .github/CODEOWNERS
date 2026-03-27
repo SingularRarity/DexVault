@@ -1,0 +1,34 @@
+# This is a CODEOWNERS file.
+# Each line is a file pattern followed by one or more owners.
+
+# These owners will be the default owners for everything in the repo.
+# They will be requested for review when someone opens a pull request.
+*       @singularraritylabs/engineering
+
+# Order is important. The last matching pattern has the most power.
+
+# Contracts
+/contracts/ @singularraritylabs/engineering @singularraritylabs/security
+
+# Frontend
+/apps/web/ @singularraritylabs/engineering @singularraritylabs/frontend
+
+# Backend
+/apps/api/ @singularraritylabs/engineering @singularraritylabs/backend
+
+# Infrastructure
+/.github/ @singularraritylabs/engineering @singularraritylabs/devops
+/docker-compose.yml @singularraritylabs/engineering @singularraritylabs/devops
+/Dockerfile @singularraritylabs/engineering @singularraritylabs/devops
+
+# Documentation
+/docs/ @singularraritylabs/engineering @singularraritylabs/product
+/README.md @singularraritylabs/engineering @singularraritylabs/product
+/CONTRIBUTING.md @singularraritylabs/engineering @singularraritylabs/product
+/SECURITY.md @singularraritylabs/engineering @singularraritylabs/security
+
+# Configuration
+/package.json @singularraritylabs/engineering
+/hardhat.config.ts @singularraritylabs/engineering
+/tsconfig.json @singularraritylabs/engineering
+/next.config.js @singularraritylabs/engineering
