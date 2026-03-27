@@ -54,3 +54,4 @@ jobs:
 
     # login step added for authentication (DV-8)
     # transition: IN_PROGRESS -> IN_REVIEW on PR open (DV-14)
+    # transition: IN_REVIEW -> QA on PR merge (DV-15)
