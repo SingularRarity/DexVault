@@ -5,7 +5,7 @@ import { ethers } from "hardhat";
 // Hardhat configuration for DexVault — compilation working (DV-19)
 const config: HardhatUserConfig = {
   solidity: {
-    version: "0.8.28",
+    version: "0.8.28", // bumped from 0.8.20 for OZ v5 (DV-21)
     evmVersion: "cancun", // For mcopy opcode (DV-24)
     settings: {
       optimizer: {
