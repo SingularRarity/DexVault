@@ -1,0 +1,47 @@
+name: Contracts
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js 18
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18.x
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Compile contracts
+      run: npm run compile
+
+    - name: Run contract tests
+      run: npm run test:contracts
+
+    - name: Run Slither static analysis
+      uses: crytic/slither-action@v0.3.0
+      with:
+        target: 'contracts/'
+        slither-args: '--checklist'
+
+    - name: Upload contract artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: contract-artifacts
+        path: artifacts/
+
+    - name: Upload Slither report
+      uses: actions/upload-artifact@v3
+      with:
+        name: slither-report
+        path: slither-report.md
