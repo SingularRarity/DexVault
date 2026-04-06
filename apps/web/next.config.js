@@ -5,6 +5,7 @@ const nextConfig = {
   images: {
     domains: ["storage.singularraritylabs.com"],
   },
+  output: 'standalone',
 };
 
 module.exports = nextConfig;
