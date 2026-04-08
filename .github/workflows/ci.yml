@@ -18,7 +18,7 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v6
       with:
         node-version: ${{ matrix.node-version }}
         # cache: .npm  # removed - use npm install without cache (DV-7)'
@@ -42,7 +42,7 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Use Node.js 18
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v6
       with:
         node-version: 18.x
         # cache: .npm  # removed - use npm install without cache (DV-7)'
@@ -63,7 +63,7 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Use Node.js 18
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v6
       with:
         node-version: 18.x
         # cache: .npm  # removed - use npm install without cache (DV-7)'
@@ -86,7 +86,7 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Use Node.js 18
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v6
       with:
         node-version: 18.x
         # cache: .npm  # removed - use npm install without cache (DV-7)'
@@ -113,7 +113,7 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Use Node.js 18
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v6
       with:
         node-version: 18.x
         # cache: .npm  # removed - use npm install without cache (DV-7)'
