@@ -29,7 +29,7 @@ jobs:
       run: npm run test:contracts
 
     - name: Run Slither static analysis
-      uses: crytic/slither-action@v0.3.0
+      uses: crytic/slither-action@v0.4.2
       with:
         target: 'contracts/'
         slither-args: '--checklist'
