@@ -67,7 +67,7 @@ jobs:
       run: npm run test:contracts
 
     - name: Upload contract artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v7
       with:
         name: contract-artifacts
         path: artifacts/

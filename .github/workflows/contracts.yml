@@ -35,13 +35,13 @@ jobs:
         slither-args: '--checklist'
 
     - name: Upload contract artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v7
       with:
         name: contract-artifacts
         path: artifacts/
 
     - name: Upload Slither report
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v7
       with:
         name: slither-report
         path: slither-report.md
